@@ -10,7 +10,7 @@ model = EfficientNetV2M()
 model.summary()
 
 
-@app.route("/predict", methods=['POST'])
+@app.route("/", methods=['POST'])
 def predict():
     file = request.files["image"]
     img = Image.open(file)
